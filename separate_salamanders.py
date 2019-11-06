@@ -56,14 +56,14 @@ def nothing(_):
 def find_salamanders():
     cv2.namedWindow("Tracking")
     cv2.createTrackbar("LH", "Tracking", 0, 255, nothing)
-    cv2.createTrackbar("LS", "Tracking", 140, 255, nothing)
+    cv2.createTrackbar("LS", "Tracking", 90, 255, nothing)
     cv2.createTrackbar("LV", "Tracking", 0, 255, nothing)
     cv2.createTrackbar("UH", "Tracking", 100, 255, nothing)
     cv2.createTrackbar("US", "Tracking", 255, 255, nothing)
     cv2.createTrackbar("UV", "Tracking", 255, 255, nothing)
 
     while True:
-        frame = cv2.imread('data/samples/R0009611.JPG')
+        frame = cv2.imread('data/P_cinereus/USNM_10_04_19_SVL/R0011158.JPG')
         frame = cv2.resize(frame, (493, 326))
 
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -96,5 +96,5 @@ def find_salamanders():
 
 
 if __name__ == '__main__':
-    # find_salamanders()
-    find_labels()
+    find_salamanders()
+    # find_labels()
